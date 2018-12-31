@@ -1,7 +1,8 @@
 # ProjectX
 
-1. Install Android SDK and Android Studio
+1. Install Android SDK and Android Studio 
         https://developer.android.com/studio/
+   install SDK from Android Studio(Android SDK Build-Tools, Android SDK Tools, Android SDK Platform-Tools) 
 
 2. Install Apache Cordova - npm install -g cordova
         https://cordova.apache.org/#getstarted
