@@ -1,0 +1,117 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.main-input {
+    // border-top: 2px dotted black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    height: 100%;
+
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        width: 28%;
+        z-index: 1;
+    }
+
+    .income-dropdown {
+        border: $slim-border;
+        margin: .2rem;
+        transition: .2s all;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $slim-shady;
+        }
+
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: $smaller-shadow;
+        }
+    }
+
+    .expense-dropdown {
+        border: $slim-border;
+        margin: .2rem;
+        transition: .2s all;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $slim-shady;
+        }
+
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: $smaller-shadow;
+        }
+    }
+
+    button {
+        margin: .7rem;
+    }
+
+    .input-btn {
+        background-color: $red-50;
+        color: black;
+        font-weight: $font-thick;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        width: 95%;
+    }
+
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem;
+    }
+
+    .invisible {
+        color: transparent;
+    }
+
+    @include responsive(first) {
+        flex-direction: column;
+
+        // #g1 {
+        //     order: 2;
+        // }
+
+        // #g2 {
+        //     order: 1;
+        // }
+
+        // #g3 {
+        //     order: 3;
+        // }
+
+        .group {
+            width: 70%;
+        }
+    }
+    .hide {
+        display: none;
+        visibility: hidden;
+    }
+
+    .backdrop {
+        padding: 50%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .input {
+        margin: .5rem;
+        > input {
+            width: 100%;
+        }
+    }
+}

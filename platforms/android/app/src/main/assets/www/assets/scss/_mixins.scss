@@ -1,0 +1,61 @@
+// MIXINS
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint==first {
+        @media only screen and (max-width: 67.5em) {
+            @content;
+        }
+
+        // 1080px / 16 px = 67.5em 
+    }
+
+    @if $breakpoint==secondFirst {
+        @media only screen and (max-width: 58.4375em) {
+            @content;
+        }
+
+        // 935px / 16 px = 67.5em 
+    }
+
+    @if $breakpoint==second {
+        @media only screen and (max-width: 51.875em) {
+            @content;
+        }
+
+        // 830px
+    }
+
+    @if $breakpoint==third {
+        @media only screen and (max-width: 43.75em) {
+            @content;
+        }
+
+        // 700px
+    }
+
+    @if $breakpoint==secondThird {
+        @media only screen and (max-width: 40em) {
+            @content;
+        }
+
+        // 640px
+    }
+
+    @if $breakpoint==fourth {
+        @media only screen and (max-width: 35.9375em) {
+            @content;
+        }
+
+        // 575px
+
+    }
+
+    @if $breakpoint==fifth {
+        @media only screen and (max-width: 30em) {
+            @content;
+        }
+
+        // 575px
+
+    }
+}

@@ -1,0 +1,54 @@
+{ /*svidja mi se*/
+    "users": {
+        "username": {
+            "password": "",
+            "email": "",
+            "langName": "",
+            "themeName": "",
+            "isNew": true /*or false*/ ,
+            "totalInc": "",
+            "totalExp": "",
+            "categoriesExp": {
+                /*ime kljuca ovde je ime "category" iz expenses e.g. "food"*/
+                /*treba li nam categorija za incomes?*/
+                "category": true
+            },
+            "incomes": {
+                /*ime kljuca ovde je incomeName iz incomes*/
+                "incomeName": true
+            },
+            "expenses": {
+                /*ime kljuca ovde je expenseName iz expenses*/
+                "expenseName": true
+            }
+        }
+    },
+    "incomes": {
+        "incomeName": {
+            "value": "",
+            "category": "",
+            "timestamp": "",
+            /*ime kljuca ovde je username korisnika value true*/
+            "userId": true
+        }
+    },
+    "expenses": {
+        "expenseName": {
+            "value": "",
+            "category": "",
+            "timestamp": "",
+            //ime kljuca ovde je username korisnika value true*/
+            "userId": true
+        }
+    },
+    "settings": {
+        "languages": {
+            /*ime kljuca ovde je ime jezika e.g. "eng", value je path do json fajla sa prevodom*/
+            "langName": ""
+        },
+        "themes": {
+            /*ime kljuca ovde je ime teme e.g. "DarkShit", value je path do json fajla sa settupom za temu*/
+            "themeName": ""
+        }
+    }
+}

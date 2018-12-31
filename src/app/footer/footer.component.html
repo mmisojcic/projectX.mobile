@@ -1,0 +1,26 @@
+<footer class="footer">
+    <!-- TODO: remove in development and inline style -->
+    <div class="text-box">
+        <p class="footer-text">ProjectX &copy;MacroHard Inc.</p>
+        <span class="banner">In development Version - 0.5</span>
+    </div>
+    <div class="content-box">
+        <!--
+            <div class="text-box">
+                <p class="header-text">{{'LABEL.HEADER_TEXT' | translate}}</p>
+
+            </div>
+        -->
+        <div class="btn-box">
+            <button class="btn btn-en" (click)="onEn()">ENG</button>
+            <button class="btn btn-sr" (click)="onSr()">SRB</button>
+            <button
+                class="btn btn-sign-out"
+                (click)="onSignOUt()"
+                *ngIf="signOutShow"
+            >
+                {{ "BUTTON.SIGN_OUT" | translate }}
+            </button>
+        </div>
+    </div>
+</footer>

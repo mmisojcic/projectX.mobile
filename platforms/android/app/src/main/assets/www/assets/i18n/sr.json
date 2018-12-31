@@ -1,0 +1,92 @@
+{
+    "EXAMPLE": {
+        "SOMETEXT": "Neki tekst",
+        "TEXT_WITH_PARAMETERS": "Neki tekst sa parametrom {{value}}"
+    },
+    "TITLE": {
+        "SETUP_GREETINGS1": "Hvala vam sto koristite ProjectX aplikaciju",
+        "SETUP_GREETINGS2": "Dozvolite nam da vam pomegnemo da pokrenete vaš novi nalog...",
+        "BALANCE_TITLE": "Balans",
+        "CATEGORIES_TITLE": "Kategorije",
+        "STATISTICS_TITLE": "Statistike",
+        "PROJECT": "ProjectX",
+        "LIST": "Transakcije"
+    },
+    "BUTTON": {
+        "ADD": "Dodaj",
+        "BACK": "Nazad",
+        "NEXT": "Sledeće",
+        "SKIP": "Preskoči",
+        "COMPLETE": "Završi",
+        "END": "Kraj",
+        "REMOVE": "Izbriši",
+        "ADD_INCOME": "Dodaj prihod",
+        "ADD_EXPENSE": "Dodaj trošak",
+        "NEW_CATEGORY": "Nova kategorija",
+        "SIGN_OUT": "Izloguj se",
+        "CANCEL": "Otkaži",
+        "RESET": "Poništi",
+        "TYPE": "Vrsta",
+        "DATE": "Datum",
+        "CATEGORY": "Kategorija"
+    },
+    "INPUT": {
+        "SETUP_BALANCE": "Prvo unesite vaše trenutno stanje na računu...",
+        "SETUP_INCOME": "Unesite vas glavni izvor prihoda ... npr. Plata..",
+        "SETUP_EXPENSE": "Sad unesite par stavki na koje generalno trosite novac ... npr. Računi, Hrana...",
+        "SETUP_TIME_FRAME": "Sad obeležite vremenski period koji želite da bude uobičajan za obračun vašeg stanja u ovoj aplikaciji... ---unesi bilo šta(ovo ne radi) :D"
+    },
+    "LABEL": {
+        "CATEGORY_NAME": "{{categoryName}}",
+        "BALANCE": "Balans",
+        "COMMON_INCOMES": "Uobičajni prihodi",
+        "COMMON_EXPENSES": "Uobičajni troškovi",
+        "DEFAULT_TIME_FRAME": "Uobičajni vremenski period",
+        "CATEGORIES": "Kategorije",
+        "BALANCE_CURRENT": "Trenutno stanje",
+        "BALANCE_OVERTIME": "Novac potrošen ovog meseca",
+        "SETTINGS_LANGUAGE": "Jezik",
+        "SETTINGS_THEME": "Tema",
+        "PROJECT_DESCRIPTION": " Ovo je projekat namenjen za moju ličnu upotrebu.<br>Radi vežbe dodali smo mogućnost da ovu aplikaciju koristi vise ljudi i da svako ima svoj nalog<br>Osnovna funkcija ove aplikacije je da vodi računa o tome koliko korisnik troši i zaradjuje novca i te podatke sortira po kategorijama i vremenu.<br> Postoji još dosta funkcionalnosti koje planiramo da dodamo, ali nam se ne žuri :D<br> Hvala vam što koristite našu aplikaciju<br> MacroHardInc tim:<br>Glavni programer:) <a href='https://www.facebook.com/mile.ignjatovic.5'>Mile Ignjatovic</a><br>Onaj drugi programer: <a href='https://www.facebook.com/marko.m.misojcic'>Marko Misojcic</a><br>\"Biznis analitičar\" ... šta god to značilo ...: <a href='https://www.youtube.com/watch?v=sIFFywo_-1w'>Nenad Mijailovic</a>",
+        "STATISTIC_TIME_FRAME": "Vreme",
+        "WELCOME": "Dobrodošli u ProjectX",
+        "HEADER_TEXT": "Vodi računa o svojim parama...",
+        "EXPENSE_CATEGORIES": "Troškovi po kategorijama",
+        "INCOME_CATEGORIES": "Prihodi po kategorijama",
+        "INCOMES": "Prihodi",
+        "EXPENSES": "Troškovi",
+        "DESCRIPTION": "Opis",
+        "CATEGORISE_THIS": "Kategorišite ovo",
+        "VALUE": "Vrednost",
+        "LOGINBEIT": "&#x2606; ZAPOČNI ŠTEDNJU ODMAH!! &#x2606;<br>Klikni na google ili email dugme ispod<br>&darr;&darr;&darr;&darr;&darr;",
+        "ADD_INCOME_TO": "Dodaj ovaj prihod pod:",
+        "ADD_EXPENSE_TO": "Dodaj ovaj trosak pod:",
+        "SPENT_THIS": "Novac potrosen poslednjih",
+        "EARNED_THIS": "Novac zaradjen poslednjih",
+        "SHOW_TRANSACTIONS": "Pregledaj sve transakcija...",
+        "HELP": "Kliknite na dodaj prihod ili dodaj trošak da pokrenete aplikaciju...",
+        "FILTER": "Opcije prikaza",
+        "FILTER_BY": "Prikaz po:",
+        "SELECT": "Odaberi vrstu transakcije",
+        "TO": "do:",
+        "INCOME": "Prihod",
+        "EXPENSE": "Trošak",
+        "TH_DESCRIPTION": "Opis",
+        "TH_VALUE": "Vrednost",
+        "TH_CATEGORY": "Kategorija",
+        "TH_TIME": "Vreme",
+        "TH_DATE": "Datum"
+    },
+    "TIME_DATE": {
+        "DAY": "Dan",
+        "WEEK": "Nedelja",
+        "MONTH": "Mesec",
+        "YEAR": "Godina",
+        "30_DAYS": "30 dana",
+        "10_days": "10 dana",
+        "7_days": "7 dana"
+    },
+    "DISCLAIMER": {
+        "IN_DEVELOPMENT": "Ovo jos nije gotovo. Trenutno prikazuje samo trosak kroz vreme."
+    }
+}

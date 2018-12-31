@@ -1,0 +1,44 @@
+<section class="categories">
+    <!-- komentar: ova komponenta moze da se uradi tako da nema income section i exp section nego
+    samo jedan section ali sa *ngFor bilo bi bolje i lakse, preglednije i jednostavnije za odrzavanje i menjanje-->
+    <h2>{{'LABEL.CATEGORIES' | translate}}</h2>
+    <div class="flex-container">
+        <div class="cat-section">
+            <span>-- {{ 'LABEL.EXPENSES' | translate}} --</span>
+            <div class="category" *ngFor="let expCat of expCategoryValuePairs">
+                <img src="" alt="" />
+                <span class="name-span">{{expCat[0]}}</span>
+                <span class="value-span">{{expCat[1] | formatMoney}}</span>
+                <button class="btn btn-remove" (click)="onRemove(expCat[0],'expense')">&minus;</button>
+            </div>
+            <div class="category add-new" (click)="openAddBox('expense')" *ngIf="expBtnAddBoxShow">&#43;</div>
+            <div class="add-box" *ngIf="expAddBoxShow">
+                <input #expInput type="text">
+                <div class="btn-box">
+                    <button class="btn btn-add" (click)="onAdd(expInput.value, 'expense')">{{'BUTTON.ADD' | translate}}</button>
+                    <button class="btn btn-finish" (click)="onFinish('expense')">{{'BUTTON.END' |
+                        translate}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="cat-section">
+            <span>-- {{ 'LABEL.INCOMES' | translate}} --</span>
+            <div class="category" *ngFor="let incCat of incCategoryValuePairs">
+                <img src="" alt="" />
+                <span class="name-span">{{incCat[0]}}</span>
+                <span class="value-span">{{incCat[1] | formatMoney}}</span>
+                <button class="btn btn-remove" (click)="onRemove(incCat[0],'income')">&minus;</button>
+            </div>
+            <div class="category add-new " (click)="openAddBox('income')" *ngIf="incBtnAddBoxShow">&#43;</div>
+            <div class="add-box" *ngIf="incAddBoxShow">
+                <input #incInput type="text">
+                <div class="btn-box">
+                    <button class="btn btn-add" (click)="onAdd(incInput.value,'income')">{{'BUTTON.ADD' | translate}}</button>
+                    <button class="btn btn-finish" (click)="onFinish('income')">{{'BUTTON.END' |
+                        translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button (click)="openTransactions()">List of transactions</button> -->
+</section>

@@ -1,0 +1,44 @@
+@import '../../../assets/scss/variables';
+
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+
+    .msg_box {
+        max-width: 50%;
+        position: relative;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        border: 1px solid $red-400;
+        border-radius: .3rem;
+        text-align: center;
+        background-color: $primary-color-light;
+        word-wrap: break-word;
+        box-shadow: $red-box-shadow;
+        z-index: 9997;
+
+        div {
+            width: 100%;
+            border-bottom: $red-boder;
+            padding: 0 1rem;
+            font-weight: $font-thick;
+            font-size: 2.5rem;
+        }
+
+        p {
+            padding: 2rem 2rem 0rem 2rem;
+        }
+
+        button {
+            margin: 3rem auto;
+        }
+    }
+}

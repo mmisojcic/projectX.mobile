@@ -1,0 +1,44 @@
+<!-- firebaseUI login -->
+<section class="login">
+
+    <div class="firebase-login">
+
+        <div class="clickbeit" [innerHTML]="'LABEL.LOGINBEIT' | translate"></div>
+        <button class="btn" (click)="anonLogin()">Try as Guest</button>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+        <div class="description">
+            <h3>{{'LABEL.WELCOME' | translate}}</h3>
+            <p [innerHtml]="'LABEL.PROJECT_DESCRIPTION' | translate">
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- <section class="login">
+    <h3>Login to ProjectX</h3>
+
+    <form>
+        <div>Log in using:</div>
+        <div>
+            <button>Facebook</button>
+            <button>Google+</button>
+        </div>
+        <div>Or:</div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+        </div>
+        <button>Login</button>
+    </form>
+    <div>
+        <label for="create`">Create account if you dont have one.</label>
+        <button name="create">Create</button>
+    </div>
+</section> -->

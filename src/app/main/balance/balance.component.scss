@@ -1,0 +1,52 @@
+@import '../../../assets/scss/mixins';
+@import '../../../assets/scss/variables';
+
+// .balance-small {
+//     min-height: 10rem !important;
+// }
+.balance {
+    // border: 1px solid black;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    height: 100%;
+
+    @include responsive(secondThird) {
+        min-height: 17rem;
+    }
+
+    .balance__container {
+        // padding: 0 15rem;
+        // border-radius: 5rem;
+        // background-image: radial-gradient(white 1%, white 22%, transparent 74%);
+
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+
+        .balance__text {
+            font-size: 2rem;
+            text-transform: uppercase;
+            // color: black;
+        }
+
+        .exp-text {
+            color: $red-600;
+            font-weight: $font-fat;
+        }
+
+        .inc-text {
+            color: $primary-blue;
+            font-weight: $font-fat;
+        }
+
+        .balance__value {
+            font-size: 6rem;
+            line-height: 6rem;
+            letter-spacing: 0.6rem;
+            text-shadow: 0px 0px 3px white, 0px 0px 9px white, 0px 0px 18px white;
+        }
+    }
+}

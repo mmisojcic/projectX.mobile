@@ -1,0 +1,193 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.show {
+    position: absolute;
+    width: fit-content;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // transform: translateX(20%);
+    background-color: rgba(58, 58, 58, 0.9);
+    z-index: 9995;
+    border-right: 1px solid #ffffff;
+    overflow: hidden;
+    transition: all .4s;
+
+    @include responsive(secondThird) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hide {
+    position: absolute;
+    width: fit-content;
+    height: 100%;
+    top: 0;
+    // left: -20%;
+    transform: translateX(-103%);
+    background-color: rgba(58, 58, 58, 0.9);
+    z-index: 9995;
+    border-right: 1px solid #ffffff;
+    overflow: hidden;
+    transition: all .4s;
+
+    @include responsive(second) {
+        transform: translateX(-203%);
+    }
+
+    @include responsive(secondThird) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.main {
+    padding: 4em;
+    // define displey of type grid
+    display: grid;
+    // define a gap width between grid cells in all directions
+    grid-gap: 3.5rem;
+
+    justify-content: stretch;
+
+    position: relative;
+
+    // how many grid rows? 3 and 1fr means they are all the same size
+    grid-template-rows: repeat(3, minmax(fr, 1fr));
+    // how many grid columns? 2 and 1fr means they are all the same size
+    grid-template-columns: repeat(2, minmax(30rem, 1fr));
+
+    // a shortcut to position the grid elements. imagine this as a matrix of fields 3x2
+    grid-template-areas: "balance incomes"
+        "balance expenses"
+        "main-input categories"
+        "statistic statistic";
+
+    height: 100%;
+
+    @include responsive(second) {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        .balance {
+            width: 90%;
+            order: 1;
+            margin: 2rem;
+        }
+
+        .incomes {
+            width: 90%;
+            margin: 2rem;
+            order: 2;
+        }
+
+        .expenses {
+            width: 90%;
+            margin: 2rem;
+            order: 3;
+        }
+
+        .main-input {
+            width: 90%;
+            order: 4;
+            margin: 2rem;
+        }
+
+        .categories {
+            width: 90%;
+            order: 5;
+            margin: 2rem;
+        }
+
+        .statistic {
+            width: 90%;
+            order: 6;
+            margin: 2rem;
+        }
+
+        .help-box {
+            width: 90%;
+            order: 3;
+            margin: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+.help-box {
+    grid-area: categories;
+    align-self: center;
+}
+
+// set grid-area nema for the grid-template-areas, and the magic happenes
+.categories {
+    grid-area: categories;
+}
+
+.balance {
+    grid-area: balance;
+}
+
+.main-input {
+    grid-area: main-input;
+}
+
+.statistic {
+    grid-area: statistic;
+}
+
+
+.total-box {
+    grid-area: total-box;
+
+    .total-expense {
+        // grid-area: total-expense;
+    }
+
+    .total-income {
+        // grid-area: total-income;
+    }
+}
+
+// second way to define position of the elements in the grid is by grid indexes 
+.login {
+    grid-area: login;
+    grid-row: 1/3;
+    grid-column: 1/4;
+}
+
+.btn-list {
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    transform: translateY(-50%);
+    // border-radius: 0rem 20rem 20rem 0rem;
+    border: none;
+
+    width: 4rem;
+    height: 100%;
+
+    display: flex;
+    justify-content: end;
+    white-space: nowrap;
+
+    // change
+    background-color: $primary-color-light;
+}
+
+.vertical-text {
+    position: fixed;
+    transform: rotate(-90deg);
+    transform-origin: left center 0;
+    // margin-left: 2rem;
+    top: 60%;
+    left: 1rem;
+    cursor: pointer;
+}

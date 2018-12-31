@@ -1,0 +1,90 @@
+@import '../../assets/scss/mixins';
+
+.footer {
+    border-top: 1px solid white;
+
+    // background-image: linear-gradient(to right bottom,
+    //     rgba(#363636, .6),
+    //     rgba(#262626, .9));
+
+    height: 10vh;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    display: flex;
+
+    @include responsive(secondThird) {
+        flex-direction: column;
+    }
+}
+
+.footer-text {
+    padding-bottom: 2rem;
+}
+.banner {
+    margin-left: auto;
+    font-size: 1rem;
+}
+
+.text-box {
+    display:flex; 
+    margin-bottom: 7rem;
+}
+
+.content-box {
+        display: none;
+
+        @include responsive(fourth) {
+            flex-direction: column;
+        }
+
+        @include responsive(secondThird) {
+           display: flex;
+        }
+
+        .btn-box {
+            display: flex;
+
+            .btn-en {
+                background-image: url(../../assets/icons/Custom-Icon-Design-Flag-3-United-Kingdom-flag.ico);
+                background-position: center;
+                background-size: cover;
+                color: transparent;
+                margin: .5rem;
+                margin-left: 5rem;
+                height: auto;
+                width: fit-content;
+
+                @include responsive(fourth) {
+                    margin-left: 0;
+                }
+            }
+
+            .btn-sr {
+                background-image: url(../../assets/icons/Serbia-Flag-icon.png);
+                background-position: center;
+                background-size: cover;
+                color: transparent;
+                margin: .5rem;
+                margin-left: 1rem;
+                height: auto;
+                width: fit-content;
+            }
+
+            .btn {}
+
+            .btn-sign-out {
+                margin-left: 3rem;
+                // margin-right: 2rem;
+                color: white;
+                font-weight: 300;
+
+                @include responsive(fourth) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+    }

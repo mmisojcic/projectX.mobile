@@ -1,0 +1,50 @@
+@import './assets/scss/variables';
+
+// RESET
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // ovako definisemo da je font size uvek 10px ili ekvivalent tome. posto je default u brovseru 16px
+    font-size: 62.5%;
+}
+
+body {
+    // TODO: change font
+    font-family: $font-family;
+    font-weight: $font-slim;
+
+    line-height: 2rem;
+    font-size: 1.5rem;
+
+    // TODO change color
+    color: $primary-color;
+    box-sizing: border-box;
+}
+
+button {
+    // TODO: change border
+    border: none;
+
+    font-size: inherit;
+    background-color: transparent;
+    padding: .5rem;
+    width: 10rem;
+}
+
+input {
+    // TODO: change border    
+    border: none;
+    border-bottom: 1px solid blue;
+
+    padding: .5rem;
+}
+
+li {
+    list-style-type: none;
+}

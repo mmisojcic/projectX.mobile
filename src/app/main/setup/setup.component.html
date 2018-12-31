@@ -1,0 +1,41 @@
+<div class="setup">
+
+    <div class="setup__greetengs">
+        {{'TITLE.SETUP_GREETINGS1' | translate}}
+    </div>
+    <div [hidden]="hideInput" class="setup__greetengs-2">
+        {{'TITLE.SETUP_GREETINGS2' | translate}}
+    </div>
+
+    <div class="input">
+        <div [hidden]="hideInput" class="input__text">
+            {{inputText | translate}}
+        </div>
+        <input #input [hidden]="hideInput" type="text" class="input__field">
+        <div class="btn-box">
+            <button class="btn btn-back" (click)="onBack()" *ngIf="currentStep.value !== 3">
+                {{btnBackText | translate}}
+            </button>
+            <button class="btn btn-next" (click)="onNext(input.value)" *ngIf="btnNextShow">
+                {{btnNextText | translate}}
+            </button>
+            <button class="btn btn-add" *ngIf="btnAddShow" (click)="onAdd(input.value)">
+                {{btnAddText | translate}}
+            </button>
+        </div>
+    </div>
+
+    <div class="cat-box">
+        <div class="table-box" *ngFor="let table of tables; let i = index" [hidden]="!table.isShown">
+            <div>{{table.name | translate}}</div>
+            <ul [hidden]="i === 3">
+                <li *ngFor="let item of table.value">{{item}}</li>
+            </ul>
+            <div [hidden]="i !== 3">
+                <div *ngFor="let time of table.value">{{time | translate}}</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn skip-btn" *ngIf="finished" (click)="onSkip()">{{btnEndText | translate}}</button>
+</div>

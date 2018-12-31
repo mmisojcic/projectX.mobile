@@ -1,0 +1,92 @@
+{
+    "EXAMPLE": {
+        "SOMETEXT": "Some text",
+        "TEXT_WITH_PARAMETERS": "Some text with parameter {{value}}"
+    },
+    "TITLE": {
+        "SETUP_GREETINGS1": "Thank you for choosing ProjectX app",
+        "SETUP_GREETINGS2": "Please let us help you set up your account...",
+        "BALANCE_TITLE": "Balance",
+        "CATEGORIES_TITLE": "Categories",
+        "STATISTICS_TITLE": "Statistics",
+        "PROJECT": "ProjectX",
+        "LIST": "Transaction"
+    },
+    "BUTTON": {
+        "ADD": "Add",
+        "BACK": "Back",
+        "NEXT": "Next",
+        "SKIP": "Skip",
+        "COMPLETE": "Complete",
+        "END": "End",
+        "REMOVE": "Remove",
+        "ADD_INCOME": "Add Income",
+        "ADD_EXPENSE": "Add Expense",
+        "NEW_CATEGORY": "New Category",
+        "SIGN_OUT": "Sign Out",
+        "CANCEL": "Cancel",
+        "RESET": "Reset",
+        "TYPE": "Type",
+        "DATE": "Date",
+        "CATEGORY": "Category"
+    },
+    "INPUT": {
+        "SETUP_BALANCE": "First lets enter your current balance...",
+        "SETUP_INCOME": "Now enter the name your source of income... e.g. Salary",
+        "SETUP_EXPENSE": "Now enter some general categories of of things you spend your money on ... e.g. Food",
+        "SETUP_TIME_FRAME": "Now enter the time frame you would like to be a default for you in this app... ---just enter something and skip this :D"
+    },
+    "LABEL": {
+        "CATEGORY_NAME": "{{categoryName}}",
+        "BALANCE": "Balance",
+        "COMMON_INCOMES": "Common incomes",
+        "COMMON_EXPENSES": "Common expenses",
+        "DEFAULT_TIME_FRAME": "Default time frame",
+        "CATEGORIES": "Categories",
+        "BALANCE_CURRENT": "Current balance",
+        "BALANCE_OVERTIME": "Money spent this month",
+        "SETTINGS_LANGUAGE": "Language",
+        "SETTINGS_THEME": "Theme",
+        "PROJECT_DESCRIPTION": "This is a personal project for keeping track of my own money.<br>For practice we added log-in and a functionality for other people to use it as well.<br>The basic function of this app is to calculate users spending and earning, and sort them in categories of type and time. We will continue adding more features when we feel like it :D Thank you for using our app.<br>MacroHardInc team:<br>Lead developer: <a href='https://www.facebook.com/mile.ignjatovic.5'>Mile Ignjatovic</a><br>The other developer: <a href='https://www.facebook.com/marko.m.misojcic'>Marko Misojcic</a><br>\"Business analyst\" ... or whatever: <a href='https://www.youtube.com/watch?v=sIFFywo_-1w'>Nenad Mijailovic</a>",
+        "STATISTIC_TIME_FRAME": "Time frame",
+        "WELCOME": "Welcome to ProjectX",
+        "HEADER_TEXT": "keep track of your shit...",
+        "EXPENSE_CATEGORIES": "Total expenses by category",
+        "INCOME_CATEGORIES": "Total incomes by category",
+        "INCOMES": "Incomes",
+        "EXPENSES": "Expenses",
+        "DESCRIPTION": "Description",
+        "CATEGORISE_THIS": "Categorise this",
+        "VALUE": "Value",
+        "LOGINBEIT": "&#x2606;  START SAVING NOW!!  &#x2606;<br>Click on google or email button below<br>&darr;&darr;&darr;&darr;&darr;",
+        "ADD_INCOME_TO": "Add this income to:",
+        "ADD_EXPENSE_TO": "Add this expense to:",
+        "SPENT_THIS": "Money spent last",
+        "EARNED_THIS": "Money earned last",
+        "SHOW_TRANSACTIONS": "Filter all transactions...",
+        "HELP": "Click on add income or add expense to get started...",
+        "FILTER": "Filter options",
+        "FILTER_BY": "Filter by:",
+        "SELECT": "Slecet type first",
+        "TO": "to:",
+        "INCOME": "Income",
+        "EXPENSE": "Expense",
+        "TH_DESCRIPTION": "Description",
+        "TH_VALUE": "Value",
+        "TH_CATEGORY": "Category",
+        "TH_TIME": "Time",
+        "TH_DATE": "Date"
+    },
+    "TIME_DATE": {
+        "DAY": "Day",
+        "WEEK": "Week",
+        "MONTH": "Month",
+        "YEAR": "Year",
+        "30_DAYS": "30 days",
+        "10_days": "10 days",
+        "7_days": "7 days"
+    },
+    "DISCLAIMER": {
+        "IN_DEVELOPMENT": "This functionality is in development. Currently it just shows your spending over time."
+    }
+}

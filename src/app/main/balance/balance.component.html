@@ -1,0 +1,10 @@
+<section class="balance" [ngClass]="{'balance-small': color === 'red' || color === 'blue'}">
+    <!-- <h2>{{'TITLE.BALANCE_TITLE' | translate}}</h2> -->
+    <div class="balance__container" >
+        <div [ngClass]="{'exp-text': color === 'red', 'inc-text': color === 'blue'}" class="balance__text">{{title | translate}} {{timeFrame | translate}}</div>
+        <div class="balance__value">{{money ? (money | formatMoney) : '---' }}</div>
+        <!-- <div>{{'LABEL.BALANCE_OVERTIME' | translate}}</div>
+        <span>{{}}</span> -->
+    </div>
+    <!-- <app-message-roll></app-message-roll> ????????? -->
+</section>

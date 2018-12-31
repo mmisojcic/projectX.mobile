@@ -1,0 +1,13 @@
+.statistics {
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    height: 100%;
+    align-items: center;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
