@@ -1,24 +1,30 @@
-<app-login class="login" *ngIf="showLogin"></app-login>
+<app-login *ngIf="showLogin"></app-login>
 <!-- <app-setup class="setup" *ngIf="showSetup" [userData]="userData"></app-setup> -->
 <main class="main" *ngIf="!showLogin">
+
+    <router-outlet></router-outlet>
     <!-- && !showSetup -->
-    <app-categories *ngIf="hasIncomes || hasExpenses" class="categories" [userData]="userData" [userExpenses]="userExpenses" [userIncomes]="userIncomes"></app-categories>
+    <!-- <app-categories *ngIf="hasIncomes || hasExpenses" class="categories" [userData]="userData" [userExpenses]="userExpenses"
+        [userIncomes]="userIncomes"></app-categories>
     <app-balance *ngIf="hasBalance" class="balance" [userData]="userData"></app-balance>
     <app-balance *ngIf="hasIncomes" class="incomes" [userData]="userData" [dataToDisplay]="'incomes'" [userIncomes]="userIncomes"></app-balance>
-    <app-balance *ngIf="hasExpenses" class="expenses" [userData]="userData" [dataToDisplay]="'expenses'" [userExpenses]="userExpenses"></app-balance>
+    <app-balance *ngIf="hasExpenses" class="expenses" [userData]="userData" [dataToDisplay]="'expenses'" [userExpenses]="userExpenses"></app-balance> -->
     <!-- <div class="total-box">
         <app-total-income class="total-income"></app-total-income>
         <app-total-expense class="total-expense"></app-total-expense>
     </div> -->
-    <app-main-input class="main-input" [userData]="userData"></app-main-input>
-    <app-statistic *ngIf="hasIncomes || hasExpenses" class="statistic" [userData]="userData" [userExpenses]="userExpenses" [userIncomes]="userIncomes"></app-statistic>
-    <button *ngIf="hasIncomes || hasExpenses" class="btn-list" (click)="catchEmit(true)">
-    </button>
-    <span *ngIf="hasIncomes || hasExpenses" class="vertical-text" (click)="catchEmit(true)">
+    <!-- <app-main-input class="main-input" [userData]="userData"></app-main-input>
+    <app-statistic *ngIf="hasIncomes || hasExpenses" class="statistic" [userData]="userData" [userExpenses]="userExpenses"
+        [userIncomes]="userIncomes"></app-statistic> -->
+
+    <!-- <button *ngIf="hasIncomes || hasExpenses" class="btn-list" (click)="catchEmit(true)">
+    </button> -->
+    <!-- <span *ngIf="hasIncomes || hasExpenses" class="vertical-text" (click)="catchEmit(true)">
         {{'LABEL.SHOW_TRANSACTIONS' | translate}}
     </span>
     <app-list [ngClass]="{'show': showTransactions===true,'hide': showTransactions===false}" (emitOnClose)="catchEmit($event)" [userData]="userData" [userExpenses]="userExpenses"
-              [userIncomes]="userIncomes"></app-list>
-    <div *ngIf="!hasBalance && !hasIncomes && !hasExpenses" class="help-box">{{'LABEL.HELP' | translate}}</div>
+              [userIncomes]="userIncomes"></app-list> -->
+
+    <!-- <div *ngIf="!hasBalance && !hasIncomes && !hasExpenses" class="help-box">{{'LABEL.HELP' | translate}}</div> -->
 </main>
 <app-popup *ngIf="showPopup"></app-popup>

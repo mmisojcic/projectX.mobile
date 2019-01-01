@@ -9,7 +9,7 @@
     </author>
     <name>ProjectX</name>
     <content src="index.html" />
-    <icon src="www/logo.png" />
+    <icon src="www/assets/icons/logo-final.png" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

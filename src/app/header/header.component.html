@@ -5,26 +5,44 @@
         </div>
         <h1>{{ "TITLE.PROJECT" | translate }}</h1>
     </div>
-    <div class="content-box">
+    <!-- <div class="content-box">
         <div class="text-box">
             <p class="header-text">{{ "LABEL.HEADER_TEXT" | translate }}</p>
-            <!-- TODO: delete in development div -->
+            TODO: delete in development div
             <div class="banner">In development Version - 0.5</div>
         </div>
         <div class="btn-box">
             <button class="btn btn-en" (click)="onEn()">ENG</button>
             <button class="btn btn-sr" (click)="onSr()">SRB</button>
-            <button
-                class="btn btn-sign-out"
-                (click)="onSignOUt()"
-                *ngIf="signOutShow"
-            >
+            <button class="btn btn-sign-out" (click)="onSignOUt()" *ngIf="signOutShow">
                 {{ "BUTTON.SIGN_OUT" | translate }}
             </button>
         </div>
+    </div> -->
+    <!-- <div class="translation">
+            <button class="btn btn-en" (click)="onEn()">ENG</button>
+            <button class="btn btn-sr" (click)="onSr()">SRB</button>
+        </div> -->
+    <button class="header_menu-btn" (click)="toggleState()">&#9776;</button>
+
+    <div class="header_menu" [@openCloseMenu]="state">
+        <ul class="header_menu-items">
+            <li class="header_menu-item"><button>Balance</button></li>
+            <li class="header_menu-item"><a routerLink="addTransaction"><button (click)="toggleState()">Add transaction</button></a></li>
+            <li class="header_menu-item"><a routerLink="allTransaction"><button (click)="toggleState()">All transaction</button></a></li>
+            <li class="header_menu-item"><button>Categories</button></li>
+            <li class="header_menu-item"><button>Statistics</button></li>
+            <ul>
+                <li class="header_menu-item">Language</li>
+                <li class="header_menu-item">
+                    <div class="translation">
+                        <button class="btn btn-en" (click)="onEn()">ENG</button>
+                        <button class="btn btn-sr" (click)="onSr()">SRB</button>
+                    </div>
+                </li>
+            </ul>
+            <li class="header_menu-item"><button (click)="onSignOut();toggleState()">Logout</button></li>
+        </ul>
     </div>
-    <div class="translation">
-        <button class="btn btn-en" (click)="onEn()">ENG</button>
-        <button class="btn btn-sr" (click)="onSr()">SRB</button>
-    </div>
+
 </header>

@@ -29,60 +29,71 @@ import { LoginService } from '../services/login.service';
 import { MainInputComponent } from './main/main-input.component/main-input.component';
 import { PopupComponent } from './main/popup/popup.component';
 import { ListComponent } from './main/list/list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BalanceAllComponent } from './main/balance-all/balance-all.component';
 
 // routes for the router
 const appRoutes: Routes = [
-    { path: '', component: AppComponent }
-    //   { path: 'hero/:id',      component: HeroDetailComponent },
-    //   {
-    //     path: 'heroes',
-    //     component: HeroListComponent,
-    //     data: { title: 'Heroes List' }
-    //   },
-    //   { path: '',
-    //     redirectTo: '/heroes',
-    //     pathMatch: 'full'
-    //   },
-    //   { path: '**', component: PageNotFoundComponent }
+	{ path: 'balance', component: BalanceAllComponent },
+	{ path: 'addTransaction', component: MainInputComponent },
+	{ path: 'allTransaction', component: ListComponent },
+	{
+		path: '',
+		redirectTo: 'balance',
+		pathMatch: 'full'
+	}
+	//   { path: 'hero/:id',      component: HeroDetailComponent },
+	//   {
+	//     path: 'heroes',
+	//     component: HeroListComponent,
+	//     data: { title: 'Heroes List' }
+	//   },
+	//   { path: '',
+	//     redirectTo: '/heroes',
+	//     pathMatch: 'full'
+	//   },
+	//   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        FooterComponent,
-        MainComponent,
-        LoginComponent,
-        SetupComponent,
-        BalanceComponent,
-        SettingsComponent,
-        StatisticComponent,
-        MainInputComponent,
-        CategoriesComponent,
-        FormatMoneyPipe,
-        PopupComponent,
-        ListComponent
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        RouterModule.forRoot(appRoutes)
-    ],
-    providers: [DBService, LoginService],
-    bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent,
+		MainComponent,
+		LoginComponent,
+		SetupComponent,
+		BalanceComponent,
+		SettingsComponent,
+		StatisticComponent,
+		MainInputComponent,
+		CategoriesComponent,
+		FormatMoneyPipe,
+		PopupComponent,
+		ListComponent,
+		BalanceAllComponent
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		FormsModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFirestoreModule,
+		HttpClientModule,
+		TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: HttpLoaderFactory,
+				deps: [HttpClient]
+			}
+		}),
+		RouterModule.forRoot(appRoutes)
+	],
+	providers: [DBService, LoginService],
+	bootstrap: [AppComponent]
 })
 export class AppModule {}
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

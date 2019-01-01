@@ -3,10 +3,14 @@
 .app {
     position: relative;
     // width: 100vw;
-    // height: 100%;
+    // height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: -webkit-fill-available;
+    background-image: linear-gradient(to right bottom,
+        rgba(#3a3a3a, .9),
+        rgba(#262626, 1)),
+        url(../assets/images/raining-money-1.png);
+    background-size: cover;
 }
 
 .background {
@@ -25,8 +29,8 @@
 }
 
 
-.no-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+// .no-content {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+// }

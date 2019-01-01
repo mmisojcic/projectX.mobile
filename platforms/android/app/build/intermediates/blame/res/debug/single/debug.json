@@ -20,12 +20,12 @@
         "source": "/home/marko/projectx.mobile/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
     },
     {
-        "merged": "/home/marko/projectx.mobile/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat",
-        "source": "/home/marko/projectx.mobile/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png"
-    },
-    {
         "merged": "/home/marko/repos/projectX.mobile/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
         "source": "/home/marko/repos/projectX.mobile/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
+    },
+    {
+        "merged": "/home/marko/projectx.mobile/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat",
+        "source": "/home/marko/projectx.mobile/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png"
     },
     {
         "merged": "/home/marko/projectx.mobile/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxhdpi_screen.png.flat",

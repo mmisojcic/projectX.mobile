@@ -2,18 +2,53 @@
 @import '../../assets/scss/variables';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50003;
     border-bottom: 1px solid white;
 
-    height: 12vh;
-    position: relative;
+    width: 100vw;
+    height: 22vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to right top,
-        rgba(#3a3a3a, 0.8),
-        rgba(#262626, 0.9)),
-        url(../../assets/images/money.jpg);
-    background-position: top;
+    background-color: $primary-color-light;
+
+    // background-image: linear-gradient(to right top,
+    //     rgba(#3a3a3a, 0.8),
+    //     rgba(#262626, 0.9)),
+    //     url(../../assets/images/money.jpg);
+    // background-position: top;
+
+    &_menu {
+        position: absolute;
+        z-index: 50001;
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $primary-color-light;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+
+            font-weight: 700;
+            margin: 2rem;
+        }
+    }
+
+    &_menu-btn {
+        position: relative;
+        z-index: 50002;
+        width: 4rem;
+        height: 4rem;
+        margin-right: 2rem;
+    }
 
     @include responsive(secondThird) {
         flex-direction: row;
@@ -25,29 +60,29 @@
         display: flex;
 
         h1 {
-            font-size: 5rem;
+            font-size: 3rem;
             font-weight: bold;
             letter-spacing: 1.5rem;
             padding-left: 2rem;
             padding-right: 2rem;
 
             @include responsive(second) {
-                font-size: 5rem;
+                font-size: 3rem;
             }
         }
 
         .img-box {
-            height: 12vh;
+            height: 8vh;
 
             img {
                 @include responsive(second) {
-                    height: 10rem;
+                    height: 95%;
                 }
 
                 display: block;
-                // padding: 1rem;
+                padding: 1rem;
                 width: auto;
-                height: 85%;
+                height: 95%;
             }
         }
     }
@@ -137,20 +172,21 @@
     }
 
     .translation {
-        display: none;
-        margin: 1rem 2rem;
+        display: flex;
+
+        // margin: 1rem 2rem;
 
         @include responsive(secondThird) {
             display: flex;
-            flex-direction: column;
+            // flex-direction: column;
 
             .btn-en {
-                margin-bottom: .5rem;
+                // margin-bottom: .5rem;
                 background-image: url(../../assets/icons/Custom-Icon-Design-Flag-3-United-Kingdom-flag.ico);
                 background-position: center;
                 background-size: cover;
                 color: transparent;
-                // margin: .5rem;
+                margin: 0 2rem;
                 // margin-left: 5rem;
                 height: auto;
                 width: fit-content;

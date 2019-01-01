@@ -46,79 +46,83 @@
 }
 
 .main {
-    padding: 4em;
-    // define displey of type grid
-    display: grid;
-    // define a gap width between grid cells in all directions
-    grid-gap: 3.5rem;
+    padding: 0 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    //     // define displey of type grid
+    //     display: grid;
+    //     // define a gap width between grid cells in all directions
+    //     grid-gap: 3.5rem;
 
-    justify-content: stretch;
+    //     justify-content: stretch;
 
-    position: relative;
+    //     position: relative;
 
-    // how many grid rows? 3 and 1fr means they are all the same size
-    grid-template-rows: repeat(3, minmax(fr, 1fr));
-    // how many grid columns? 2 and 1fr means they are all the same size
-    grid-template-columns: repeat(2, minmax(30rem, 1fr));
+    //     // how many grid rows? 3 and 1fr means they are all the same size
+    //     grid-template-rows: repeat(3, 1fr);
+    //     // how many grid columns? 2 and 1fr means they are all the same size
+    //     grid-template-columns: repeat(2, minmax(30rem, 1fr));
 
-    // a shortcut to position the grid elements. imagine this as a matrix of fields 3x2
-    grid-template-areas: "balance incomes"
-        "balance expenses"
-        "main-input categories"
-        "statistic statistic";
+    //     // a shortcut to position the grid elements. imagine this as a matrix of fields 3x2
+    //     grid-template-areas: "balance incomes"
+    //         "balance expenses"
+    //         "main-input categories"
+    //         "statistic statistic";
 
-    height: 100%;
+    //     height: 100%;
 
-    @include responsive(second) {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
+    //     @include responsive(second) {
+    //         padding: 1rem;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         justify-items: center;
 
-        .balance {
-            width: 90%;
-            order: 1;
-            margin: 2rem;
-        }
+    //         .balance {
+    //             width: 90%;
+    //             order: 1;
+    //             margin: 2rem;
+    //         }
 
-        .incomes {
-            width: 90%;
-            margin: 2rem;
-            order: 2;
-        }
+    //         .incomes {
+    //             width: 90%;
+    //             margin: 2rem;
+    //             order: 2;
+    //         }
 
-        .expenses {
-            width: 90%;
-            margin: 2rem;
-            order: 3;
-        }
+    //         .expenses {
+    //             width: 90%;
+    //             margin: 2rem;
+    //             order: 3;
+    //         }
 
-        .main-input {
-            width: 90%;
-            order: 4;
-            margin: 2rem;
-        }
+    //         .main-input {
+    //             width: 90%;
+    //             order: 4;
+    //             margin: 2rem;
+    //         }
 
-        .categories {
-            width: 90%;
-            order: 5;
-            margin: 2rem;
-        }
+    //         .categories {
+    //             width: 90%;
+    //             order: 5;
+    //             margin: 2rem;
+    //         }
 
-        .statistic {
-            width: 90%;
-            order: 6;
-            margin: 2rem;
-        }
+    //         .statistic {
+    //             width: 90%;
+    //             order: 6;
+    //             margin: 2rem;
+    //         }
 
-        .help-box {
-            width: 90%;
-            order: 3;
-            margin: 2rem;
-            text-align: center;
-        }
-    }
+    //         .help-box {
+    //             width: 90%;
+    //             order: 3;
+    //             margin: 2rem;
+    //             text-align: center;
+    //         }
+    //     }
 }
 
 .help-box {
@@ -126,35 +130,35 @@
     align-self: center;
 }
 
-// set grid-area nema for the grid-template-areas, and the magic happenes
-.categories {
-    grid-area: categories;
-}
+// // set grid-area nema for the grid-template-areas, and the magic happenes
+// .categories {
+//     grid-area: categories;
+// }
 
-.balance {
-    grid-area: balance;
-}
+// .balance {
+//     grid-area: balance;
+// }
 
-.main-input {
-    grid-area: main-input;
-}
+// .main-input {
+//     grid-area: main-input;
+// }
 
-.statistic {
-    grid-area: statistic;
-}
+// .statistic {
+//     grid-area: statistic;
+// }
 
 
-.total-box {
-    grid-area: total-box;
+// .total-box {
+//     grid-area: total-box;
 
-    .total-expense {
-        // grid-area: total-expense;
-    }
+//     .total-expense {
+//         // grid-area: total-expense;
+//     }
 
-    .total-income {
-        // grid-area: total-income;
-    }
-}
+//     .total-income {
+//         // grid-area: total-income;
+//     }
+// }
 
 // second way to define position of the elements in the grid is by grid indexes 
 .login {
