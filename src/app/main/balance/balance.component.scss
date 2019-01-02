@@ -13,6 +13,7 @@
     text-align: center;
 
     height: 100%;
+    margin-bottom: 1rem;
 
     @include responsive(secondThird) {
         min-height: 17rem;

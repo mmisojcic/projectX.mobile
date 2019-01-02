@@ -1,7 +1,7 @@
 <header class="header">
     <div class="logo-box">
         <div class="img-box">
-            <img src="../assets/icons/logo-final.png" alt="" />
+            <!-- <img src="../../assets/icons/logo-final.png" alt=""> -->
         </div>
         <h1>{{ "TITLE.PROJECT" | translate }}</h1>
     </div>
@@ -24,18 +24,23 @@
             <button class="btn btn-sr" (click)="onSr()">SRB</button>
         </div> -->
 
-    <button *ngIf="showMenuBtn" class="header_menu-btn" (click)="toggleState()">&#9776;</button>
+    <button *ngIf="showMenuBtn" class="header_menu-btn" (click)="toggleState()">&#9776;&#xFE0E;</button>
 
     <div class="header_menu" [@openCloseMenu]="state">
         <ul class="header_menu-items">
-            <li class="header_menu-item"><button (click)="onMenuItem(0);toggleState()">{{'BUTTON.BALANCE' | translate}}</button></li>
-            <li class="header_menu-item"><button (click)="onMenuItem(1);toggleState()">{{'BUTTON.ADD_TRANSACTION' |
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(0);toggleState()">{{'BUTTON.BALANCE'
+                    | translate}}</button></li>
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(1);toggleState()">{{'BUTTON.ADD_TRANSACTION'
+                    |
                     translate}}</button></li>
-            <li class="header_menu-item"><button (click)="onMenuItem(2);toggleState()">{{'BUTTON.ALL_TRANSACTION' |
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(2);toggleState()">{{'BUTTON.ALL_TRANSACTION'
+                    |
                     translate}}</button></li>
-            <li class="header_menu-item"><button (click)="onMenuItem(3);toggleState()">{{'BUTTON.CATEGORIES' |
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(3);toggleState()">{{'BUTTON.CATEGORIES'
+                    |
                     translate}}</button></li>
-            <li class="header_menu-item"><button (click)="onMenuItem(4);toggleState()">{{'BUTTON.STATISTICS' |
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(4);toggleState()">{{'BUTTON.STATISTICS'
+                    |
                     translate}}</button></li>
             <ul>
                 <li class="header_menu-item">{{'LABEL.LANGUAGE' | translate}}</li>
@@ -46,7 +51,8 @@
                     </div>
                 </li>
             </ul>
-            <li class="header_menu-item"><button (click)="onSignOut();toggleState()">{{'BUTTON.SIGN_OUT' | translate}}</button></li>
+            <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onSignOut();toggleState()">{{'BUTTON.SIGN_OUT'
+                    | translate}}</button></li>
         </ul>
     </div>
 

@@ -36,7 +36,7 @@
         <table class="list-item">
             <tr>
                 <th>{{'LABEL.TH_DESCRIPTION' | translate}}</th>
-                <th>{{'LABEL.TH_VALUE' | translate}} <span #valueSort (click)="onValueSort()" class="sort">&#8679;</span>
+                <th (click)="onValueSort()">{{'LABEL.TH_VALUE' | translate}} <span #valueSort class="sort">&#8679;</span>
                 </th>
                 <!-- <th>{{'LABEL.TH_CATEGORY' | translate}}</th> -->
                 <th>{{'LABEL.TH_TIME' | translate}}</th>

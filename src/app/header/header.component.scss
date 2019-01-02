@@ -34,15 +34,16 @@
         background-color: $primary-color-light;
 
         &-item {
-
             display: flex;
             justify-content: center;
 
             font-weight: 700;
             margin: 2rem;
 
-            button {
+            &--btn {
                 width: 100%;
+                padding: .5rem 2rem;
+                font-weight: 700;
             }
         }
     }
@@ -54,47 +55,13 @@
         height: 4rem;
         margin-right: 2rem;
         margin-left: auto;
+        color: #fff;
     }
 
     @include responsive(secondThird) {
         flex-direction: row;
         height: fit-content;
         align-items: start;
-    }
-
-    .logo-box {
-        display: flex;
-        align-items: center;
-
-        justify-content: space-around;
-
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: 1.5rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
-
-            @include responsive(second) {
-                font-size: 3rem;
-            }
-        }
-
-        .img-box {
-            height: 8rem;
-
-
-            img {
-                @include responsive(second) {
-                    height: 95%;
-                }
-
-                display: block;
-                padding: 1rem;
-                width: auto;
-                height: 95%;
-            }
-        }
     }
 
     .content-box {
@@ -107,7 +74,6 @@
         @include responsive(secondThird) {
             display: none;
         }
-
 
         .text-box {
             display: flex;
@@ -126,18 +92,15 @@
                     margin-left: 0;
                 }
             }
-
         }
 
         .text-box {
             @include responsive(secondFirst) {
                 flex-direction: column;
             }
-
         }
 
         .btn-box {
-
             display: flex;
 
             .btn-en {
@@ -145,7 +108,7 @@
                 background-position: center;
                 background-size: cover;
                 color: transparent;
-                margin: .5rem;
+                margin: 0.5rem;
                 margin-left: 5rem;
                 height: auto;
                 width: fit-content;
@@ -160,7 +123,7 @@
                 background-position: center;
                 background-size: cover;
                 color: transparent;
-                margin: .5rem;
+                margin: 0.5rem;
                 height: auto;
                 width: fit-content;
             }
@@ -178,7 +141,6 @@
                 }
             }
         }
-
     }
 
     .translation {
@@ -216,5 +178,48 @@
                 width: fit-content;
             }
         }
+    }
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 1.5rem;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
+
+        @include responsive(second) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.img-box {
+    position: relative;
+    z-index: 50010;
+    height: 6rem;
+    width: 5rem;
+    margin: 1rem 2rem;
+    background-image: url('../../assets/images/logo-final.png');
+    background-size: cover;
+    background-position: top;
+
+    // border: 1px solid #fff;
+
+    img {
+        @include responsive(second) {
+            height: 95%;
+        }
+
+        position: relative;
+        z-index: 50010;
+        display: block;
+        padding: 1rem;
+        width: auto;
+        height: 95%;
     }
 }
