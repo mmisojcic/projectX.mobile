@@ -1,3 +1,4 @@
+import { NavigationService } from './../services/navigation.service';
 import { CategoriesComponent } from './main/categories/categories.component';
 import { FormatMoneyPipe } from './../custom_pipes/format.money.pipe';
 import { StatisticComponent } from './main/statistic/statistic.component';
@@ -30,17 +31,12 @@ import { MainInputComponent } from './main/main-input.component/main-input.compo
 import { PopupComponent } from './main/popup/popup.component';
 import { ListComponent } from './main/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BalanceAllComponent } from './main/balance-all/balance-all.component';
 
 // routes for the router
 const appRoutes: Routes = [
-	{ path: 'balance', component: BalanceAllComponent },
-	{ path: 'addTransaction', component: MainInputComponent },
-	{ path: 'allTransaction', component: ListComponent },
 	{
 		path: '',
-		redirectTo: 'balance',
-		pathMatch: 'full'
+		component: MainComponent
 	}
 	//   { path: 'hero/:id',      component: HeroDetailComponent },
 	//   {
@@ -69,8 +65,7 @@ const appRoutes: Routes = [
 		CategoriesComponent,
 		FormatMoneyPipe,
 		PopupComponent,
-		ListComponent,
-		BalanceAllComponent
+		ListComponent
 	],
 	imports: [
 		BrowserModule,
@@ -88,7 +83,7 @@ const appRoutes: Routes = [
 		}),
 		RouterModule.forRoot(appRoutes)
 	],
-	providers: [DBService, LoginService],
+	providers: [DBService, LoginService, NavigationService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

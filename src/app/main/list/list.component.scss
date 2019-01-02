@@ -2,11 +2,8 @@
 @import '../../../assets/scss/mixins';
 
 .list-component {
-    position: absolute;
     width: fit-content;
     height: 100%;
-    top: 0;
-    left: 0;
     background-color: rgba(58, 58, 58, 0.9);
     z-index: 9995;
     border-right: 1px solid #ffffff;
@@ -45,7 +42,8 @@
 }
 
 .options {
-    margin: 1rem;
+    width: fit-content;
+    margin: 1rem auto;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
@@ -89,10 +87,10 @@
 .dropdown {
     // visibility: hidden;
     max-height: 0;
+    width: fit-content;
     opacity: 0;
     top: 0;
-    margin: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
         0px 0px 11px rgba(0, 0, 0, 0.1);
@@ -107,27 +105,28 @@
     max-height: 6000px;
     top: 0;
     opacity: 1;
-    margin: 1rem;
     padding: 0.5rem;
+    margin: 0 auto;
+    width: fit-content;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
         0px 0px 11px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     transition: max-height 0.5s, opacity 0.5s;
 
 }
 
 .li {
     display: flex;
-    padding: 0 0.5rem;
+    padding: 0.2rem 4rem;
     border: $slim-border;
 
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: $slim-shady;
-        cursor: pointer;
-    }
+    // &:hover {
+    //     transform: translateY(-2px);
+    //     box-shadow: $slim-shady;
+    //     cursor: pointer;
+    // }
 
     &:active {
         transform: translateY(-1px);
@@ -146,10 +145,10 @@
     font-size: 1.5rem;
     border: $slim-border;
 
-    &:hover {
-        transform: none;
-        box-shadow: none;
-    }
+    // &:hover {
+    //     transform: none;
+    //     box-shadow: none;
+    // }
 
     &:active {
         transform: none;
@@ -178,8 +177,8 @@
     opacity: 0;
     height: auto;
     max-height: 0;
-    margin: 1rem;
     width: fit-content;
+    max-width: calc(100vw - 4rem);
     overflow-y: scroll;
     transition: opacity 0.5s, max-height 0.5s;
 }
@@ -187,10 +186,12 @@
 .list-show {
     opacity: 1;
     height: auto;
-    max-height: 70vh;
+    max-height: calc(100vh - 35rem);
     width: fit-content;
-    padding: 1rem;
-    margin: 1rem;
+    margin: 0 auto;
+    max-width: calc(100vw - 4rem);
+    padding: .2rem;
+    margin-top: 1rem;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
         0px 0px 11px rgba(0, 0, 0, 0.1);
@@ -207,13 +208,13 @@
         background-color: #ffffff;
         color: #000000;
         text-align: left;
-        padding: 0 .5rem;
+        padding: 0 .3rem;
         border: 1px solid $primary-color;
     }
 
     td {
         border: 1px solid $primary-color;
-        padding: 0 0.5rem;
+        padding: 0 0.3rem;
     }
 
     tr {

@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { Income } from '../../models/income.model';
 import { PopupService } from './popup/popup.service';
+import { NavigationService } from './../../services/navigation.service';
 
 @Component({
 	selector: 'app-main',
@@ -19,6 +20,15 @@ import { PopupService } from './popup/popup.service';
 })
 // in every component we use userData or userCredentials we will implement OnChanges angular life cycle hook
 export class MainComponent implements OnInit, OnChanges {
+	// loadCategory = false;
+	// loadBalance = false;
+	// loadMainInput = false;
+	// loadStatistics = false;
+	// loadList = false;
+	loadLogin = true;
+
+	loadComponents = [true, false, false, false, false]; // 0-balance, 1-main-input, 2-list, 3-cats, 4-stats(follow main menu order)
+
 	userCredentials: UserCredentials;
 	userData: User;
 	userExpenses: Expense[];
@@ -56,13 +66,16 @@ export class MainComponent implements OnInit, OnChanges {
 	showTransactions = false;
 
 	// showSetup = false;
-	showLogin = true;
+
 	showPopup = false;
 	hasBalance = false;
 	hasIncomes = false;
 	hasExpenses = false;
 
-	constructor(private popupService: PopupService) {}
+	constructor(
+		private popupService: PopupService,
+		private navigationService: NavigationService
+	) {}
 
 	catchEmit(eventData) {
 		this.showTransactions = eventData;
@@ -73,6 +86,16 @@ export class MainComponent implements OnInit, OnChanges {
 		console.log('onInit user data TEST', this.userData);
 		this.popupService.open.subscribe((data: boolean) => {
 			this.showPopup = data;
+		});
+
+		this.navigationService.loadValue.subscribe(data => {
+			for (let i = 0; i < this.loadComponents.length; i++) {
+				if (i === data.index) {
+					this.loadComponents[i] = data.value;
+				} else {
+					this.loadComponents[i] = false;
+				}
+			}
 		});
 	}
 
@@ -89,11 +112,13 @@ export class MainComponent implements OnInit, OnChanges {
 			if (changes._userCredentials.currentValue.isNew) {
 				console.log('On credentials changes is new');
 				// this.showSetup = true;
-				this.showLogin = false;
+				this.loadLogin = false;
+				this.navigationService.showMenuButton.next(!this.loadLogin);
 			} else {
 				console.log('On credentials changes not new');
-				// this.showSetup = false;
-				this.showLogin = false;
+				// this.loadSetup = false;
+				this.loadLogin = false;
+				this.navigationService.showMenuButton.next(!this.loadLogin);
 			}
 		}
 	}

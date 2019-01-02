@@ -28,7 +28,12 @@
         "RESET": "Reset",
         "TYPE": "Type",
         "DATE": "Date",
-        "CATEGORY": "Category"
+        "CATEGORY": "Category",
+        "BALANCE": "Balance",
+        "ADD_TRANSACTION": "Add Transaction",
+        "ALL_TRANSACTION": "All Transaction",
+        "CATEGORIES": "Categories",
+        "STATISTICS": "Statistics"
     },
     "INPUT": {
         "SETUP_BALANCE": "First lets enter your current balance...",
@@ -37,6 +42,7 @@
         "SETUP_TIME_FRAME": "Now enter the time frame you would like to be a default for you in this app... ---just enter something and skip this :D"
     },
     "LABEL": {
+        "LANGUAGE": "Language",
         "CATEGORY_NAME": "{{categoryName}}",
         "BALANCE": "Balance",
         "COMMON_INCOMES": "Common incomes",

@@ -12,6 +12,7 @@ import {
 	transition
 	// ...
 } from '@angular/animations';
+import { NavigationService } from './../../services/navigation.service';
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
@@ -40,7 +41,7 @@ import {
 })
 export class HeaderComponent implements OnInit {
 	state = 'open';
-	menuBtn = '&#9776;';
+	showMenuBtn = false;
 
 	@Input()
 	userData: User;
@@ -48,7 +49,10 @@ export class HeaderComponent implements OnInit {
 	userCredentials: UserCredentials;
 	@Input()
 	signOutShow = false;
-	constructor(public translate: TranslateService) {}
+	constructor(
+		public translate: TranslateService,
+		private navigationService: NavigationService
+	) {}
 
 	onSignOut() {
 		auth()
@@ -64,7 +68,16 @@ export class HeaderComponent implements OnInit {
 	toggleState() {
 		this.state === 'open' ? (this.state = 'closed') : (this.state = 'open');
 	}
-	ngOnInit() {}
+
+	onMenuItem(index) {
+		this.navigationService.selectMenuItem(index, true);
+	}
+
+	ngOnInit() {
+		this.navigationService.showMenuButton.subscribe(data => {
+			this.showMenuBtn = data;
+		});
+	}
 
 	onEn() {
 		this.translate.use('en');

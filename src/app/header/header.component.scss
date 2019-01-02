@@ -9,7 +9,7 @@
     border-bottom: 1px solid white;
 
     width: 100vw;
-    height: 22vh;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,11 +34,16 @@
         background-color: $primary-color-light;
 
         &-item {
+
             display: flex;
             justify-content: center;
 
             font-weight: 700;
             margin: 2rem;
+
+            button {
+                width: 100%;
+            }
         }
     }
 
@@ -48,6 +53,7 @@
         width: 4rem;
         height: 4rem;
         margin-right: 2rem;
+        margin-left: auto;
     }
 
     @include responsive(secondThird) {
@@ -58,6 +64,9 @@
 
     .logo-box {
         display: flex;
+        align-items: center;
+
+        justify-content: space-around;
 
         h1 {
             font-size: 3rem;
@@ -72,7 +81,8 @@
         }
 
         .img-box {
-            height: 8vh;
+            height: 8rem;
+
 
             img {
                 @include responsive(second) {

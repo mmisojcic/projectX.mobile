@@ -46,10 +46,11 @@
 }
 
 .main {
-    padding: 0 4em;
+    padding: 10rem 2rem 2rem 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
     height: 100vh;
     //     // define displey of type grid
     //     display: grid;

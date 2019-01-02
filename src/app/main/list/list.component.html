@@ -1,10 +1,11 @@
 <div>
-    <div class="title">
+    <!-- <div class="title">
         <span>{{'TITLE.LIST' | translate}}</span>
         <button class="btn-close" (click)="close()">&#215;</button>
-    </div>
+    </div> -->
     <div class="options">
-        <div class="filter-reset"><span>{{'LABEL.FILTER' | translate}}</span><button (click)="reset()">{{'BUTTON.RESET' | translate}}</button></div>
+        <div class="filter-reset"><span>{{'LABEL.FILTER' | translate}}</span><button (click)="reset()">{{'BUTTON.RESET'
+                | translate}}</button></div>
         <div class="opt-buttons">
             <button (click)="dropdownOption('Type')">{{'BUTTON.TYPE' | translate}}</button>
             <span>{{'LABEL.FILTER_BY' | translate}}</span>
@@ -14,13 +15,16 @@
     </div>
     <div #type [ngClass]="{'dropdown':!showDropdown,'showme':showDropdown}">
         <ul *ngIf="showType">
-            <li class="li" (click)="setFilterOptions('Type','Expense');setList();dropdownOption('Type')">{{'LABEL.EXPENSE' | translate}}</li>
-            <li class="li" (click)="setFilterOptions('Type','Income');setList();dropdownOption('Type')">{{'LABEL.INCOME' | translate}}</li>
+            <li class="li" (click)="setFilterOptions('Type','Expense');setList();dropdownOption('Type')">{{'LABEL.EXPENSE'
+                | translate}}</li>
+            <li class="li" (click)="setFilterOptions('Type','Income');setList();dropdownOption('Type')">{{'LABEL.INCOME'
+                | translate}}</li>
         </ul>
         <div [hidden]="!showDate">
             <div class="div" *ngIf="categoriesList.length === 0"><span>{{'LABEL.SELECT' | translate}}</span></div>
             <div class="div" *ngIf="categoriesList.length !== 0" class="datepick">
-                <input #startDate type="date" (change)="setFilterOptions('start',startDate.value,startDate)">{{'LABEL.TO' | translate}}<input #endDate type="date" (change)="setFilterOptions('end',endDate.value,endDate);setList();dropdownOption('Date')">
+                <input #startDate type="date" (change)="setFilterOptions('start',startDate.value,startDate)">{{'LABEL.TO'
+                | translate}}<input #endDate type="date" (change)="setFilterOptions('end',endDate.value,endDate);setList();dropdownOption('Date')">
             </div>
         </div>
         <ul *ngIf="showCategory">
@@ -34,16 +38,16 @@
                 <th>{{'LABEL.TH_DESCRIPTION' | translate}}</th>
                 <th>{{'LABEL.TH_VALUE' | translate}} <span #valueSort (click)="onValueSort()" class="sort">&#8679;</span>
                 </th>
-                <th>{{'LABEL.TH_CATEGORY' | translate}}</th>
+                <!-- <th>{{'LABEL.TH_CATEGORY' | translate}}</th> -->
                 <th>{{'LABEL.TH_TIME' | translate}}</th>
-                <th>{{'LABEL.TH_DATE' | translate}}</th>
+                <!-- <th>{{'LABEL.TH_DATE' | translate}}</th> -->
             </tr>
             <tr *ngFor="let item of list">
                 <td>{{item.getName()}}</td>
                 <td>{{item.getValue() | formatMoney}}</td>
-                <td>{{item.getCategory()}}</td>
-                <td>{{item.getTimeStamp().toLocaleTimeString()}}</td>
-                <td>{{item.getTimeStamp().toDateString()}}</td>
+                <!-- <td>{{item.getCategory()}}</td> -->
+                <td>{{item.getTimeStamp().toLocaleString()}}</td>
+                <!-- <td>{{item.getTimeStamp().Date()}}</td> -->
             </tr>
         </table>
     </div>

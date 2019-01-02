@@ -28,7 +28,12 @@
         "RESET": "Poništi",
         "TYPE": "Vrsta",
         "DATE": "Datum",
-        "CATEGORY": "Kategorija"
+        "CATEGORY": "Kategorija",
+        "BALANCE": "Balans",
+        "ADD_TRANSACTION": "Nova Transakcija",
+        "ALL_TRANSACTION": "Sve Transakcije",
+        "CATEGORIES": "Kategorije",
+        "STATISTICS": "Statistika"
     },
     "INPUT": {
         "SETUP_BALANCE": "Prvo unesite vaše trenutno stanje na računu...",
@@ -37,6 +42,7 @@
         "SETUP_TIME_FRAME": "Sad obeležite vremenski period koji želite da bude uobičajan za obračun vašeg stanja u ovoj aplikaciji... ---unesi bilo šta(ovo ne radi) :D"
     },
     "LABEL": {
+        "LANGUAGE": "Jezik",
         "CATEGORY_NAME": "{{categoryName}}",
         "BALANCE": "Balans",
         "COMMON_INCOMES": "Uobičajni prihodi",
