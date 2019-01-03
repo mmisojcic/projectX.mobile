@@ -43,7 +43,7 @@
 
 .options {
     width: fit-content;
-    margin: 1rem auto;
+    margin: .5rem auto;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
@@ -190,12 +190,12 @@
 .list-show {
     opacity: 1;
     height: auto;
-    max-height: calc(100vh - 30rem);
+    max-height: calc(100vh - 33rem);
     width: fit-content;
     margin: 0 auto;
     max-width: calc(100vw - 4rem);
     padding: .1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.1),
         0px 0px 11px rgba(0, 0, 0, 0.1);

@@ -6,7 +6,11 @@
     <app-categories *ngIf="(hasIncomes && loadComponents[3]) || (hasExpenses && loadComponents[3])" class="categories"
         [userData]="userData" [userExpenses]="userExpenses" [userIncomes]="userIncomes"></app-categories>
 
-    <app-balance *ngIf="hasBalance && loadComponents[0]" class="balance" [userData]="userData"></app-balance>
+
+    <div *ngIf="hasBalance && loadComponents[0]">
+        <h2>{{'TITLE.BALANCE_TITLE' | translate}}</h2>
+        <app-balance class="balance" [userData]="userData"></app-balance>
+    </div>
     <app-balance *ngIf="hasIncomes && loadComponents[0]" class="incomes" [userData]="userData" [dataToDisplay]="'incomes'"
         [userIncomes]="userIncomes"></app-balance>
     <app-balance *ngIf="hasExpenses && loadComponents[0]" class="expenses" [userData]="userData" [dataToDisplay]="'expenses'"

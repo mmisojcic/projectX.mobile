@@ -1,15 +1,18 @@
 <section>
+    <h2>{{'LABEL.ADD_TRANSACTION' | translate}}</h2>
     <div class="main-input">
         <div class="backdrop" (click)="onBackdropClick()"></div>
         <div id="g1" class="group" [ngClass]="{'hide': !expDropIsHidden}">
-            <button class="btn" (click)="onIncBtn()">{{incDropIsHidden? ('BUTTON.ADD_INCOME' | translate) : ('BUTTON.CANCEL' | translate)}}</button>
+            <button class="btn" (click)="onIncBtn()">{{incDropIsHidden? ('BUTTON.ADD_INCOME' | translate) :
+                ('BUTTON.CANCEL' | translate)}}</button>
             <div [hidden]="incDropIsHidden">
                 <div class="input">
                     <label for="name">{{'LABEL.DESCRIPTION' | translate}}</label>
                     <input #incName type="text" name="name">
                     <label for="value">{{'LABEL.VALUE' | translate}}</label>
                     <input #incValue type="number" name="value">
-                    <button class="btn input-btn" [ngClass]="{'invisible': expDropIsHidden && incDropIsHidden}" (click)="onCategorise('inc')">{{'LABEL.ADD_INCOME_TO' | translate}}</button>
+                    <button class="btn input-btn" [ngClass]="{'invisible': expDropIsHidden && incDropIsHidden}" (click)="onCategorise('inc')">{{'LABEL.ADD_INCOME_TO'
+                        | translate}}</button>
                 </div>
                 <div [hidden]="!incCatClicked">
                     <div class="income-dropdown" *ngFor="let inc of userData?.getCategoriesInc()" (click)="onIncomeAddClick(inc, incName?.value, incValue?.value)">{{inc}}</div>
@@ -25,14 +28,16 @@
         </div>
 
         <div id="g3" class="group" [ngClass]="{'hide': !incDropIsHidden}">
-            <button class="btn" (click)="onExpBtn()">{{expDropIsHidden ? ('BUTTON.ADD_EXPENSE' | translate) : ('BUTTON.CANCEL' | translate)}}</button>
+            <button class="btn" (click)="onExpBtn()">{{expDropIsHidden ? ('BUTTON.ADD_EXPENSE' | translate) :
+                ('BUTTON.CANCEL' | translate)}}</button>
             <div [hidden]="expDropIsHidden">
                 <div class="input">
                     <label for="name">{{'LABEL.DESCRIPTION' | translate}}</label>
                     <input #expName type="text" name="name">
                     <label for="value">{{'LABEL.VALUE' | translate}}</label>
                     <input #expValue type="number" name="value">
-                    <button class="btn input-btn" [ngClass]="{'invisible': expDropIsHidden && incDropIsHidden}" (click)="onCategorise('exp')">{{'LABEL.ADD_EXPENSE_TO' |
+                    <button class="btn input-btn" [ngClass]="{'invisible': expDropIsHidden && incDropIsHidden}" (click)="onCategorise('exp')">{{'LABEL.ADD_EXPENSE_TO'
+                        |
                         translate}}</button>
                 </div>
                 <div [hidden]="!expCatClicked">

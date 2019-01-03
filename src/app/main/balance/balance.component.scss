@@ -16,7 +16,7 @@
     margin-bottom: 1rem;
 
     @include responsive(secondThird) {
-        min-height: 17rem;
+        min-height: 13rem;
     }
 
     .balance__container {
@@ -44,8 +44,8 @@
         }
 
         .balance__value {
-            font-size: 6rem;
-            line-height: 6rem;
+            font-size: 4rem;
+            line-height: 4rem;
             letter-spacing: 0.6rem;
             text-shadow: 0px 0px 3px white, 0px 0px 9px white, 0px 0px 18px white;
         }

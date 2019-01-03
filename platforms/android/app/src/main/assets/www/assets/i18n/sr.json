@@ -6,7 +6,7 @@
     "TITLE": {
         "SETUP_GREETINGS1": "Hvala vam sto koristite ProjectX aplikaciju",
         "SETUP_GREETINGS2": "Dozvolite nam da vam pomegnemo da pokrenete vaš novi nalog...",
-        "BALANCE_TITLE": "Balans",
+        "BALANCE_TITLE": "Stanje",
         "CATEGORIES_TITLE": "Kategorije",
         "STATISTICS_TITLE": "Statistike",
         "PROJECT": "ProjectX",
@@ -44,11 +44,13 @@
     "LABEL": {
         "LANGUAGE": "Jezik",
         "CATEGORY_NAME": "{{categoryName}}",
-        "BALANCE": "Balans",
+        "BALANCE": "Stanje",
         "COMMON_INCOMES": "Uobičajni prihodi",
         "COMMON_EXPENSES": "Uobičajni troškovi",
         "DEFAULT_TIME_FRAME": "Uobičajni vremenski period",
         "CATEGORIES": "Kategorije",
+        "ADD_TRANSACTION": "Nova Transakcija",
+        "ALL_TRANSACTION": "Sve Transakcije",
         "BALANCE_CURRENT": "Trenutno stanje",
         "BALANCE_OVERTIME": "Novac potrošen ovog meseca",
         "SETTINGS_LANGUAGE": "Jezik",

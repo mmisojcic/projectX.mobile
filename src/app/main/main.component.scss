@@ -51,7 +51,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     //     // define displey of type grid
     //     display: grid;
     //     // define a gap width between grid cells in all directions

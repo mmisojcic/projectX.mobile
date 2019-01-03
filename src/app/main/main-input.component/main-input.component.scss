@@ -97,6 +97,7 @@
             width: 70%;
         }
     }
+
     .hide {
         display: none;
         visibility: hidden;
@@ -110,7 +111,8 @@
 
     .input {
         margin: .5rem;
-        > input {
+
+        >input {
             width: 100%;
         }
     }

@@ -49,6 +49,8 @@
         "COMMON_EXPENSES": "Common expenses",
         "DEFAULT_TIME_FRAME": "Default time frame",
         "CATEGORIES": "Categories",
+        "ADD_TRANSACTION": "Add Transaction",
+        "ALL_TRANSACTION": "All Transaction",
         "BALANCE_CURRENT": "Current balance",
         "BALANCE_OVERTIME": "Money spent this month",
         "SETTINGS_LANGUAGE": "Language",
