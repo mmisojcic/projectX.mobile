@@ -1,5 +1,3 @@
-import { Income } from './../models/income.model';
-import { Expense } from './../models/expense.model';
 import { Converter } from './../converters/converter';
 import { config } from './../services/config';
 import { User } from './../models/user.model';

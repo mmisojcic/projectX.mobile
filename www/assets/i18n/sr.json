@@ -10,7 +10,8 @@
         "CATEGORIES_TITLE": "Kategorije",
         "STATISTICS_TITLE": "Statistike",
         "PROJECT": "ProjectX",
-        "LIST": "Transakcije"
+        "LIST": "Transakcije",
+        "MENU": "Meni"
     },
     "BUTTON": {
         "ADD": "Dodaj",
@@ -29,7 +30,7 @@
         "TYPE": "Vrsta",
         "DATE": "Datum",
         "CATEGORY": "Kategorija",
-        "BALANCE": "Balans",
+        "BALANCE": "Stanje",
         "ADD_TRANSACTION": "Nova Transakcija",
         "ALL_TRANSACTION": "Sve Transakcije",
         "CATEGORIES": "Kategorije",

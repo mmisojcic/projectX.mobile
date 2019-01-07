@@ -10,7 +10,8 @@
         "CATEGORIES_TITLE": "Categories",
         "STATISTICS_TITLE": "Statistics",
         "PROJECT": "ProjectX",
-        "LIST": "Transaction"
+        "LIST": "Transaction",
+        "MENU": "Menu"
     },
     "BUTTON": {
         "ADD": "Add",

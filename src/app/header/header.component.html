@@ -24,9 +24,12 @@
             <button class="btn btn-sr" (click)="onSr()">SRB</button>
         </div> -->
 
-    <button *ngIf="showMenuBtn" class="header_menu-btn" (click)="toggleState()">&#9776;&#xFE0E;</button>
+    <button *ngIf="showMenuBtn" class="header_menu-btn" (click)="toggleState()">
+        <div class="header_menu-btn--line"></div>
+    </button>
 
     <div class="header_menu" [@openCloseMenu]="state">
+        <h2>{{'TITLE.MENU' | translate}}</h2>
         <ul class="header_menu-items">
             <li class="header_menu-item"><button class="header_menu-item--btn" (click)="onMenuItem(0);toggleState()">{{'BUTTON.BALANCE'
                     | translate}}</button></li>
