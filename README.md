@@ -20,5 +20,5 @@ Before usage do
 
     -   ng serve-start angular project
     -   ng build --prod-builds angular project (output folder now is www)
-    -   cordova build <platform>(e.g. android)-builds cordova project to specified platform app
+    -   cordova build *platform*(e.g. android)-builds cordova project to specified platform app
         (output folder: <project.path>/platforms/android/app/build/outputs/apk/debug/)
